@@ -23,9 +23,9 @@ module.exports = function(app) {
                 response.status(200).json(results.rows)
             })
         })
-    app.route("/delete")
+    app.route("/delete/:id")
         .delete((request, response)=>{
-            const { language_id } = request.body
+            const language_id = parseInt(request.params.id)
 
             pool.query("DELETE FROM public.language WHERE language_id = $1",[language_id], (error, results)=> {
                 if (error){

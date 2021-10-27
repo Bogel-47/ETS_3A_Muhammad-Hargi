@@ -46,6 +46,18 @@
       value="Show Data"
       @click="showData"
     />
+    <thead>
+      <tr>
+        <th>Language ID</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="language in languaged" :key="language.language_id">
+        <td>{{language.language_id}}</td>
+        <td>{{language.name}}</td>
+      </tr>
+    </tbody>
     <br>
     <br>
     DELETE DATA LANGUAGE
@@ -53,15 +65,15 @@
       type="text"
       id="update"
       placeholder="Enter ID Language"
-      v-model="languageIDDelete"
-      @keyup.enter="deleteLanguage"
+      v-model="idDelete"
+      @keyup.enter="deleteLanguage(idDelete)"
     />
     
     <input
       id="submit"
       type="button"
       value="Delete"
-      @click="deleteLanguage"
+      @click="deleteLanguage(idDelete)"
     />
   </div>
 </template>
@@ -69,11 +81,12 @@
 <script>
 import axios from "axios";
 export default {
-  name: 'language',
+  name: 'languages',
   data() {
     return {
       languageName : "",
-      language_id : ""
+      language_id : "",
+      languaged : null
     };
   },
   methods: {
@@ -92,7 +105,7 @@ export default {
       axios.get('http://localhost:3000/show')
       .then((response)=>{
         console.log(response)
-        return response.data;
+        this.languaged=response.data
       })
     },
     putLanguage(){
@@ -103,9 +116,8 @@ export default {
         console.log(response)
       })
     },
-    deleteLanguage(){
-      var id = this.languageIDDelete
-      axios.delete('http://localhost:3000/delete',{language_id:id})
+    deleteLanguage(id){
+      axios.delete('http://localhost:3000/delete/'+id)
       .then((response)=>{
         console.log(response)
         console.log(id)
