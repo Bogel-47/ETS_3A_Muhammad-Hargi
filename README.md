@@ -10,8 +10,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div>
-  <h1 align="center">cronômetro</h1>
-  <p align="center">A timer for task made with JavaScript</p>
+  <h1 align="center">ETS</h1>
+  <p align="center">Language database</p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
