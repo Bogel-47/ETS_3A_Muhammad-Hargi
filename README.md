@@ -84,9 +84,6 @@ This project was created to fulfill the mid-semester evaluation in a web develop
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-<div>
-	<img width="100%" src="images/usage.gif" />
-</div>
 
 To use this app, you can:
 
@@ -123,3 +120,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- WARNING -->
 ## WARNING
 This project was carried out without using existing data, because there were obstacles in loading data in the database
+<p align="right">(<a href="#top">back to top</a>)</p>
