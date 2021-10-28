@@ -35,18 +35,7 @@ module.exports = function(app) {
                 response.status(200)
             })
         })
-    app.route("/deletename")
-        .delete((request, response)=>{
-            const { name } = request.body
 
-            pool.query("DELETE FROM public.language WHERE name = $1",[name], (error, results)=> {
-                if (error){
-                    throw error
-                }
-
-                response.status(200)
-            })
-        })
     app.route("/update")
         .put((request,response)=>{
             const {name, language_id} = request.body

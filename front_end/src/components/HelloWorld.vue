@@ -4,8 +4,7 @@
     <h2>ETS WEBDEV PRAKTIK</h2>
     Muhammad Hargi Muttaqin (3A-191524027)
     <br>
-    <br>  
-    pls insert character in insert input to show data  
+    <br>
     <table>
     <thead>
       <tr>
@@ -80,7 +79,9 @@ export default {
     return {
       languageName : "",
       language_id : "",
-      languaged : null
+      languaged : null,
+      languageID : "",
+      updateName : "",
     };
   },
   methods: {
@@ -113,10 +114,16 @@ export default {
         })
     }
   },
-  updated(){
+  created(){
     axios.get('http://localhost:3000/show')
     .then((response)=>{
       console.log(response)
+      this.languaged=response.data
+    })
+  },
+  updated(){
+    axios.get('http://localhost:3000/show')
+    .then((response)=>{
       this.languaged=response.data
     })
   },
