@@ -5,7 +5,8 @@
     Muhammad Hargi Muttaqin (3A-191524027)
     <br>
     <br>  
-    <table> 
+    pls insert character in insert input to show data  
+    <table>
     <thead>
       <tr>
         <th>Language ID</th>
