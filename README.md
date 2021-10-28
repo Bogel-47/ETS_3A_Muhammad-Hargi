@@ -21,7 +21,6 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#cronômetro">cronômetro</a></li>
 	<li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -79,6 +78,7 @@ This project was created to fulfill the mid-semester evaluation in a web develop
     * cd to `front-end` and install packages with `yarn install`
     * Run the server with `yarn serve`
     * Open http://localhost:8081/ in your browser
+    * To show data please type 1 character in input form
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
