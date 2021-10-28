@@ -89,6 +89,7 @@ export default {
         axios.post('http://localhost:3000/input', { name: name })
         .then((response) => {
           console.log(response)
+          alert('Success')
         })
         .error((err) => {
           console.error(err);
@@ -103,11 +104,12 @@ export default {
       })
     },
     deleteLanguage(id){
-      axios.delete('http://localhost:3000/delete/'+id)
-      .then((response)=>{
-        console.log(response)
-        console.log(id)
-      })
+      if (confirm('Are you sure?'))
+        axios.delete('http://localhost:3000/delete/'+id)
+        .then((response)=>{
+          console.log(response)
+          console.log(id)
+        })
     }
   },
   updated(){
